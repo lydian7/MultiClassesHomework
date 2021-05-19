@@ -19,7 +19,7 @@ public class Library {
     }
 
     public void addBook(Book book){
-        if(this.books.size()+1 <= this.capacity){
+        if(this.books.size() < this.capacity){
             if(this.numberByGenre.containsKey(book.getGenre())){
                 int bookCount = this.numberByGenre.get(book.getGenre());
                 this.numberByGenre.put(book.getGenre(), bookCount + 1);
